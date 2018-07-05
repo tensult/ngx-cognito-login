@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md">
+    <a class="navbar-brand" href="https://apps.tensult.com/">
+        <img src="https://s3.ap-south-1.amazonaws.com/static.tensult.com/img/tensult-text-logo.svg" alt="logo">
+    </a>
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <ul class="navbar-nav">
+        <ng-template #elseBlock>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/signin']">Signin</a>
+            </li>
+        </ng-template>
+        <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://tensult.com/#contact">Contact</a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="signedInUserName; else elseBlock">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                {{signedInUserName}}
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" [routerLink]="['/signout']">Sign out</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/tensult">
+                <img src="https://s3.ap-south-1.amazonaws.com/static.tensult.com/img/github-logo.png" alt="github" width="20px">
+            </a>
+        </li>
+    </ul>
+    <a href=""><img src="{{githubImagePath}}" alt=""></a> 
+</nav>

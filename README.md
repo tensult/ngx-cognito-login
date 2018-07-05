@@ -2,15 +2,15 @@
 This is a fully functional Angular 6 Demo App with AWS Cognito login.
 
 ## Installation
-`
+```
 git clone https://github.com/tensult/ngx-cognito-login.git
 cd ngx-cognito-login
 npm install
-`
+```
 ## Starting the App
-`
+```
 ng serve
-`
+```
 Once app is successfully started: open http://localhost:4200/ in your browser
 
 # Configure with you AWS account
